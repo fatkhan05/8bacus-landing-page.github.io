@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<b:if cond='data:blog.searchLabel'>
+<style>
+.breadcrumbs{display:none}
+div#labelinto{z-index:20;margin:0;color:#fff;text-align:center;height:100%;position:absolute;width:100%}
+.labelinto{z-index:2;position:absolute;width:100%;height:100%}
+div#labelinto div.labelan{position:absolute;top:40%;left:50%;transform:translate(-50%,-50%);width:1080px;max-width:100%;text-align:left;padding:0 0 0 8em;box-sizing:border-box}
+div#labelinto div.labelan i.labels{left:0;position:absolute;top:50%;transform:translate(0,-50%);font-size:6em;font-weight:100;opacity:.3}
+div#labelinto div.labelan div.title{font-weight:700;font-size:2.5em;text-shadow:6px 6px 0 rgba(0,0,0,0.1)}
+div#labelinto div.labelan div.content{width:600px;max-width:100%}
+/*div#labelinto div.labelan div.title small.cap{display:block;font-size:14px;font-weight:300}*/
+@keyframes randi-wave2{0%{transform:translateX(0) translateZ(0) scaleY(1)}50%{transform:translateX(-25%) translateZ(0) scaleY(0.55)}100%{transform:translateX(-50%) translateZ(0) scaleY(1)}}
+.waveWrapper{z-index:0;overflow:hidden;position:relative;left:0;top:0;margin:auto;width:100%;height:420px;user-select:none;-webkit-user-select:none}
+.randi-wavebg{position:absolute;width:100%;overflow:hidden;height:100%;bottom:0;background:linear-gradient(-45deg,#f5efef, #EE7752, #E73C7E, #23A6D5, #23D5AB,#764ba2,#7577a9);background-size:400% 400%;-webkit-animation:Gradient 50s ease infinite;-moz-animation:Gradient 50s ease infinite;animation:Gradient 50s ease infinite}
+.randi-bgt{z-index:15;opacity:0.5}
+.randi-bgm{z-index:10;opacity:0.75}
+.randi-bgb{z-index:5}
+.wave{position:absolute;left:0;width:200%;height:100%;background-repeat:repeat no-repeat;background-position:0 bottom;transform-origin:center bottom}
+.randi-wavetop{background-size:50% 100px}
+.randi-wave-ani .randi-wavetop{animation:move-wave 3s;-webkit-animation:move-wave 3s;-webkit-animation-delay:1s;animation-delay:1s}
+.randi-wave-mid{background-size:50% 120px}
+.randi-wave-ani .randi-wave-mid{animation:randi-wave2 10s linear infinite}
+.randi-wave-bot{background-size:50% 100px}
+.randi-wave-ani .randi-wave-bot{animation:randi-wave2 15s linear infinite}
+.randi_wrapper{margin-top:15px}
+@-webkit-keyframes Gradient{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@-moz-keyframes Gradient{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes Gradient{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+</style>
+<body>
+<div class='waveWrapper randi-wave-ani'>
+<div id='labelinto'>
+<div class='labelinto'>
+<div class='labelan'>
+<i class='labels fa fa-folder-open'></i><div class='title'>
+<!--<small class='cap'>Kategori</small>--><span><data:blog.pageName/></span></div>
+</div>
+</div>
+<div class='randi-wavebg randi-bgt'>
+  <div class='wave randi-wavetop' style='background-image: url(&apos;https://front-end-noobs.com/jecko/img/wave-top.png&apos;)'>
+  </div>
+</div>
+<div class='randi-wavebg randi-bgm'>
+  <div class='wave randi-wave-mid' style='background-image: url(&apos;https://front-end-noobs.com/jecko/img/wave-mid.png&apos;)'>
+  </div>
+</div>
+<div class='randi-wavebg randi-bgb'>
+  <div class='wave randi-wave-bot' style='background-image: url(&apos;https://front-end-noobs.com/jecko/img/wave-bot.png&apos;)'>
+  </div>
+</div>
+</div>
+</b:if>
+</body>
+</html>
