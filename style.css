@@ -6,6 +6,9 @@ html {
   width: 100;
   height: 100vh;
 }
+html, body {
+  overflow-x: hidden;
+}
 html,
 .maps {
   background-color: #000;
@@ -19,21 +22,24 @@ body {
   /* overflow: hidden; */
 }
 
-#waves1,
-#waves2,
-#waves3,
-#waves4,
-#waves5,
-#waves6,
-#waves {
-  /* width: 100%;
-  height: 40rem; */
-  margin-bottom: -5rem;
+.waves {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: -100px;
+  position: relative;
+}
+
+.waves img {
+  width: 100%;
 }
 
 .insdutry {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  margin: 10em;
+  align-items: center;
+  /* margin: 10em; */
 }
 
 #navbarNav {
@@ -50,15 +56,45 @@ li {
   padding: 6px;
 }
 .herosection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #000;
-  height: 40rem;
+  height: 55rem;
 }
 
-.hero,
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  /* padding-top: -1rem; */
+}
+
+/* .hero, */
+.about {
+  /* padding: 10rem; */
+  /* margin: 10rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  /* margin-top: 10rem; */
+  /* margin-left: 10rem;
+  margin-right: 10rem; */
+}
+
 .content-about {
-  margin-top: 10rem;
-  margin-left: 10rem;
-  margin-right: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem;
+}
+
+.box-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .title {
@@ -93,7 +129,7 @@ li {
   color: white;
 }
 
-.wave {
+/* .wave {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -101,16 +137,12 @@ li {
   height: 100px;
   background: url('asset/wave.png');
   background-size: 1000px 100px;
-}
+} */
 
-.insdutry {
-  background-color: #000;
-}
-
-.waves {
+/* .waves {
   margin: 0;
   padding: 0;
-}
+} */
 svg {
   display: block;
   margin: 0;
@@ -380,11 +412,12 @@ path {
 .industry {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Menempatkan elemen secara vertikal di tengah */
-  align-items: center; /* Menempatkan elemen secara horizontal di tengah */
+  justify-content: center; 
+  align-items: center; 
   background-color: #000;
-  height: 100em;
-  text-align: center; /* Memastikan teks di dalamnya juga berada di tengah */
+  height: 70em;
+  /* text-align: center;  */
+  /* margin-top: 10rem; */
 }
 
 .card-industry {
@@ -402,8 +435,8 @@ path {
   gap: 30px;
 }
 .card-industri {
-  height: 240px;
-  width: 320px;
+  height: 190px;
+  width: 270px;
   background-color: #fff;
   border-radius: 5%;
 }
@@ -418,8 +451,17 @@ path {
 }
 
 .partner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
   height: 40rem;
-  margin-top: 20rem;
+  /* margin-top: 20rem; */
+}
+
+.partner .carousel {
+    margin: 0 auto;
 }
 
 .text-title-partner {
@@ -500,11 +542,7 @@ path {
 }
 
 .careers {
-  /* min-height: 80rem; */
-}
-
-.button-careers {
-    margin-top: 4rem;
+  min-height: 20rem;
 }
 
 .button-careers,
@@ -680,6 +718,12 @@ path {
   background-color: #FFA62F;
   height: 3.3rem;
   font-size: 13px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .box-about-me {
